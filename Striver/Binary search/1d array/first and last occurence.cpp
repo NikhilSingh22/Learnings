@@ -1,41 +1,43 @@
-int binary_search(int arr[],int n , int x , int flag)
-{
-    int l = 0;
-    int h=n-1;
-    int res=-1;
-    while(l<=h)
+int binary_search(vector<int>& nums, int target, int flag)
     {
-        int m = l+(h-l)/2;
-        if(arr[m]==x)
+        int n = nums.size();
+        int l = 0;
+        int h = n-1;
+        int res=-1;
+        while(l<=h)
         {
-            res = m;
-            if(flag==0)
+            int m = l+(h-l)/2;
+             
+            if(nums[m]==target)
             {
-             h=m-1;   
+                res = m;
+                if(flag==0)
+                {
+                    h=m-1;
+                }
+                else
+                {
+                    l=m+1;
+                }
+            }
+            else if(nums[m]<target)
+            {
+                l=m+1;
             }
             else
             {
-             l=m+1;
+                h=m-1;
             }
         }
-        else if(arr[m]<x)
-        {
-            l=m+1;
-        }
-        else
-        {
-            h=m-1;
-        }
+        return res;
     }
-    
-    return res;
-}
-vector<int> find(int arr[], int n , int x )
-{
-    vector<int>ans;
-    int floor = binary_search(arr,n,x,0);
-    int ceil = binary_search(arr,n,x,1);
-    ans.push_back(floor);
-    ans.push_back(ceil);
-    return ans;
-}
+    vector<int> searchRange(vector<int>& nums, int target) {
+        
+        int first=binary_search(nums,target,0);
+        int last = binary_search(nums,target,1);
+        vector<int>ans;
+        ans.push_back(first);
+        ans.push_back(last);
+        return ans;
+        
+    }
