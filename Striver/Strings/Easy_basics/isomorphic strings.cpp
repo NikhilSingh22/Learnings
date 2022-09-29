@@ -10,7 +10,7 @@ bool areIsomorphic(string str1, string str2)
        
        for(int i = 0;i<str1.size();i++)
         {
-            mp1[str1[i]] = i+1; 
+            mp1[str1[i]] = i+1;  // we are just putting i+1 for 1 base indexing 
             mp2[str2[i]]= i+1;
         }
         
