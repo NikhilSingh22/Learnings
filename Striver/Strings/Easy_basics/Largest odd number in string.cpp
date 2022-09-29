@@ -4,8 +4,8 @@ string largestOddNumber(string num) {
         
         for(int i=n-1 ; i>=0 ;i--)
         {
-             int n = (int)num[i]; // converting a character in int
-                 if(n&1==1)
+             int x = (int)num[i]; // converting a character in int
+                 if(x&1==1)
                  {
                      str = num.substr(0,i+1);
                      break;
