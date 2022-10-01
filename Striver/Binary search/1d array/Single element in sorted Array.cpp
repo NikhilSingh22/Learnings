@@ -17,7 +17,7 @@
                 return nums[m];
             else if(nums[m]==nums[m-1])
             {
-                if((m-1)%2==0)
+                if((m-1)%2==0) // if single element is in left side then m-1%2 will become odd. if not it will be even
                     l=m+1;
                 else 
                     h=m;
@@ -25,7 +25,7 @@
             }
             else if(nums[m]==nums[m+1])
             {
-                if(m%2==0)
+                if(m%2==0)  // we are on first occurenece and still it is even so single element is not is left half .
                     l=m+1;
                 else 
                     h=m;
