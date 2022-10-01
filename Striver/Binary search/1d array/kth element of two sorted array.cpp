@@ -1,7 +1,7 @@
  int kthElement(int arr1[], int arr2[], int n, int m, int k)
     {
         if(n>m)
-        return kthElement(arr2,arr1,m,n,k);
+        return kthElement(arr2,arr1,m,n,k); // we always want arr1 to be smaller in size.
         
         int l = max(0,k-m) , h = min(k,n);
         
