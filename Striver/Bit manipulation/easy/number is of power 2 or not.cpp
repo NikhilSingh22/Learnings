@@ -10,3 +10,10 @@
        }
     return false;
     }
+
+
+
+// optimized approach
+ bool isPowerofTwo(long long n){
+        return (n!=0) && ((n & (n-1))==0);   // if n == 0 return false || n & (n-1) == 1 return false;
+    }
