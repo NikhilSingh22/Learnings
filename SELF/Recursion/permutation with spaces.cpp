@@ -19,8 +19,11 @@
         
         // op2.push_back(s[i]);
         // solver(ans,op2,s,i+1);
+  
+//    more easy way is this ...
         
-        
+//          solver(ans,sol+" "+s[i],s,i+1);
+//         solver(ans,sol+s[i],s,i+1);
     
         if(i<s.size())
             sol+=" ";
