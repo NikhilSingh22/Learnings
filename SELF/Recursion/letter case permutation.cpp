@@ -1,4 +1,4 @@
-void solver(vector<string>&ans,string sol,string s,int i)
+  void solver(vector<string>&ans,string sol,string s,int i)
     {
         if(i==s.size())
         {
@@ -7,7 +7,7 @@ void solver(vector<string>&ans,string sol,string s,int i)
             return;
         }
 
-        if(s[i]>=48 && s[i]<=57)
+        if(isdigit(s[i]))
         {
             sol.push_back(s[i]);
             solver(ans,sol,s,i+1);
