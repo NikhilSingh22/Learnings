@@ -1,5 +1,3 @@
-// brute force;
-
 void solver(vector<string>&ans,string sol,string s,int i)
     {
         if(i==s.size())
@@ -16,17 +14,10 @@ void solver(vector<string>&ans,string sol,string s,int i)
         }
         else
         {
-            sol.push_back(s[i]);
+            sol.push_back(tolower(s[i]));
             solver(ans,sol,s,i+1);
-
-            char ch;
             sol.pop_back();
-            if(s[i]>=97  && s[i]<=122)
-            ch = s[i]-32;
-            else
-            ch = s[i]+32;
-
-            sol.push_back(ch);
+            sol.push_back(toupper(s[i]));
             solver(ans,sol,s,i+1); 
         }
     }
